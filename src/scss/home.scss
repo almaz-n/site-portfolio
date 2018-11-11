@@ -1,0 +1,61 @@
+.main {
+    padding: 40px 0;
+    background: url('../assets/images/bg-main.jpg') no-repeat center center;
+
+    &__inner {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-width: 960px;
+        margin: auto;
+    }
+
+    &__sidebar {
+        width: 250px;
+    }
+
+    &-nav {
+        
+        margin-bottom: 22px;
+        background: #eff3f7;        
+        border-radius: 4px;
+
+        &__list {
+            
+        }
+
+        &__item {
+            margin: 0 10px;
+        }
+
+        &__item:not(:first-child) {
+            border-top: 2px solid #3ba8c0;
+        }
+
+        &__item.current {
+            margin: 0;
+            margin-bottom: -2px;
+            background: #3ba8c0;
+
+            .main-nav__link {
+                color: #fff;
+            }
+        }
+
+        &__link {
+            display: block;
+            padding-left: 18px;
+            padding-top: 24px;
+            padding-bottom: 23px;
+            text-decoration: none;
+            font-size: 23px;
+            font-family: 'fira_sansbook';
+            color: #3ba8c0;   
+        }
+
+        &__item:last-child .main-nav__link {
+            border-bottom: none;
+        }
+    }
+      
+}
