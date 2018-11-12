@@ -13,15 +13,16 @@ var gulp = require('gulp'),
 
 gulp.task('dev', ['build', 'watch', 'browser-sync']);
 gulp.task('build', ['html', 'styles', 'scripts', 'assets']);
+
 // Объединение и сжатие JS-файлов
 gulp.task("scripts", function() {
-    return gulp.src("src/js/*.js") // директория откуда брать исходники
-        .pipe(concat('scripts.js')) // объеденим все js-файлы в один 
-        .pipe(uglify()) // вызов плагина uglify - сжатие кода
+    return gulp.src("src/js/*.js") 
+        .pipe(concat('scripts.js')) 
+        .pipe(uglify()) 
         .pipe(rename({ 
             basename: "app"
-        })) // вызов плагина rename - переименование файла с приставкой .min
-        .pipe(gulp.dest('./build/js/')); // директория продакшена, т.е. куда сложить готовый файл
+        })) 
+        .pipe(gulp.dest('./build/js/')); 
 });
 
 // Выполняет сборку наших стилей.

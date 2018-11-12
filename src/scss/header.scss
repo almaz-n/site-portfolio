@@ -1,6 +1,6 @@
 .page-header {
-    padding: 35px 0;
-    background: #eff3f7 url('../assets/images/header-bottom.png') no-repeat center bottom;
+    padding: 10px 0;
+    background: #eff3f7 url('../assets/images/bg-header.jpg') repeat-x center top;
 
     &__wrap {
         display: flex;
@@ -11,6 +11,10 @@
         padding: 0 15px;
         margin: auto;
     }
+}
+
+.logo__img {
+    display: block;
 }
 
 .social-links {
@@ -31,6 +35,7 @@
         display: block;
         width: 48px;
         height: 48px;
+        transition: all 0.2s ease-in-out;
         
         &--vk {
             background: url('../assets/images/vk.png') no-repeat center center;
@@ -41,12 +46,24 @@
         }
         &--tw {
             background: url('../assets/images/tw.png') no-repeat center center;
+
+            &:hover {
+                background: url('../assets/images/tw-hover.png') no-repeat center center;
+            }
         }
         &--fc {
             background: url('../assets/images/fc.png') no-repeat center center;
+
+            &:hover {
+                background: url('../assets/images/fc-hover.png') no-repeat center center;
+            }
         }
         &--gh {
             background: url('../assets/images/gh.png') no-repeat center center;
+
+            &:hover {
+                background: url('../assets/images/gh-hover.png') no-repeat center center;
+            }
         }
     }
 }
