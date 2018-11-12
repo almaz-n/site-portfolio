@@ -1,0 +1,29 @@
+.page-footer {    
+    background: #f9f9f9;    
+    font-family: 'Open Sans', sans-serif;
+
+    &__inner {
+        display: flex;
+        flex-wrap: wrap;        
+        align-items: center;
+        max-width: 500px;
+        margin: auto;
+        padding: 17px 0 23px;
+    }
+
+    &__copyright {
+        font-size: 12px;
+        color: #727070;
+        font-weight: 300;
+    }
+}
+
+.user-account {
+    margin-right: 55px;
+    padding-left: 25px;
+    background: url('../assets/images/locked.png') no-repeat center left;
+    color: #323232;
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: bold;
+}
