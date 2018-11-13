@@ -42,7 +42,7 @@ gulp.task('styles', function() {
 });
 
 gulp.task('html', function() {
-	gulp.src('src/index.html')
+	gulp.src('src/*.html')
 		.pipe(gulp.dest('build/'));
 });
 
