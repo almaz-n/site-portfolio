@@ -22,8 +22,16 @@
     margin-right: 55px;
     padding-left: 25px;
     background: url('../assets/images/locked.png') no-repeat center left;
-    color: #323232;
     font-size: 14px;
     line-height: 21px;
     font-weight: bold;
+
+    &:hover {
+        background: url('../assets/images/unlocked.png') no-repeat center left;
+    }
+
+    &__link {
+        color: #323232;
+        text-decoration: none;
+    }
 }

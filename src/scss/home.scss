@@ -13,10 +13,17 @@
         width: 250px;
     }
 
+    &__info {
+        max-width: 650px;
+        width: 100%;
+    }
+
     &-nav {        
-        margin-bottom: 35px;
-        background: #eff3f7;        
-        border-radius: 4px;
+        margin-bottom: 35px;        
+        border-radius: 4px;        
+        background-image: -webkit-linear-gradient( 90deg, rgb(233,230,229) 0%, rgb(251,249,249) 94%, rgb(255,255,255) 100%);
+        box-shadow: 0px 2px 1px 0px rgba(9, 9, 9, 0.07),inset 0px -2px 3px 0px rgba(41, 41, 41, 0.05);
+        overflow: hidden;
 
         &__list {
             margin: 0;
@@ -24,16 +31,18 @@
         }
 
         &__item {
-            margin: 0 10px;
+            padding: 0 10px;
+            box-shadow: 0px 2px 1px 0px rgba(9, 9, 9, 0.16),inset 0px 1px 0px 0px rgba(255, 255, 255, 0.3);
+            cursor: pointer;
 
-            &:not(:first-child) {
-                border-top: 2px solid #3ba8c0;
+            &:hover {
+                background-image: -webkit-linear-gradient( 90deg, rgb(194,192,192) 0%, rgb(227,225,225) 87%, rgb(230,228,228) 90%, rgb(232,231,231) 100%);
+                box-shadow: inset 0px -2px 3px 0px rgba(41, 41, 41, 0.05);
             }
 
             &.current {
                 margin: 0;
-                margin-bottom: -2px;
-                background: #3ba8c0;
+                background-image: -webkit-linear-gradient( 90deg, rgb(62,183,153) 0%, rgb(126,232,206) 100%);                  
 
                 .main-nav__link {
                     color: #fff;
@@ -51,12 +60,7 @@
             font-family: 'fira_sansbook';
             color: #3ba8c0;   
         }
-
-        &__item:last-child .main-nav__link {
-            border-bottom: none;
-        }
-    }
-      
+    }      
 }
 
 .contact-info {
@@ -71,23 +75,28 @@
 
     &__title {
         padding-left: 30px;
-        background: #f1c97b;
         font-size: 20px;
         color: #d0982c;
+        text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.4);
         line-height: 43px;
         font-family: 'Open Sans', sans-serif;
         font-weight: 700;
+        background-image: -webkit-linear-gradient( 90deg, rgb(220,177,93) 0%, rgb(244,204,126) 90%);
+        box-shadow: 0px 2px 1px 0px rgba(9, 9, 9, 0.17),inset 0px 1px 0px 0px rgba(255, 255, 255, 0.25);          
     }
 
     &__item {
         background: #fbfafa;
+        background-image: -webkit-linear-gradient( 90deg, rgb(233,231,231) 0%, rgba(251,249,249,0) 100%);
+        box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.35),inset 0px 2px 2px 0px rgba(114, 112, 112, 0.1);
 
         &:not(:last-child) {
-            border-bottom: 1px solid #d6d5d3;
+            border-bottom: 1px solid rgb(214, 213, 211);
         }
 
         &:hover {
-            background: #f3e9d5;
+            background-image: -webkit-linear-gradient( 90deg, rgb(224,197,145) 0%, rgba(251,249,249,0) 100%);
+            box-shadow: inset 0px 2px 2px 0px rgba(114, 112, 112, 0.1); 
         }
     }
 
@@ -112,5 +121,74 @@
         &--skype {
             background: url('../assets/images/contact-skype.png') no-repeat center left;
         }
+    }
+}
+
+.about-block {
+    margin-bottom: 40px;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0px 5px 10px 0px rgba(236, 232, 227, 0.75),inset 0px 6px 6px 0px rgba(255, 255, 255, 0.004);
+    background: #f4f3f2;
+
+    &__title {
+        padding: 16px 20px 18px 40px;
+        font-size: 24px;
+        font-family: 'Open Sans', sans-serif;
+        color: rgb(238, 237, 236);
+        line-height: 0.917;
+        text-align: left;
+        text-shadow: 0px 1px 0px rgba(102, 101, 101, 0.004);
+        background-image: -webkit-linear-gradient( 90deg, rgb(123,120,120) 0%, rgb(169,168,168) 100%);
+        box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.3);
+    }
+
+    &__desc {
+        padding: 35px 45px;
+        @include clearfix();
+    }
+
+    &__left {
+        float: left;
+        margin-right: 30px;
+    }
+    &__right {
+        float: right;
+        max-width: 380px;
+        width: 100%;
+    }
+          
+}
+
+.avatar {
+    max-width: 148px;
+    width: 100%;
+    overflow: hidden;
+
+    &__img {
+        width: 100%;
+    }
+}
+
+.about-me {
+    margin: 0;
+    padding: 0;
+
+    &__item {
+        display: flex;
+        margin-bottom: 12px;
+        font-size: 14px;
+        font-family: "Open Sans", sans-serif;
+        color: rgb(114, 112, 112);
+        line-height: 1.2;
+        text-align: left;
+    }
+
+    &__label {
+        margin-right: 10px;
+    }
+
+    &__value {
+        max-width: 290px;
     }
 }
